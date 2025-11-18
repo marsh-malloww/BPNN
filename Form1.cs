@@ -50,11 +50,12 @@ namespace BPNN
             epochs();
             trained = true;
             textBox3.Text = "";
+            textBox1.Text = "";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if(!trained)
+            if (!trained)
             {
                 MessageBox.Show("Neural Network Not Trained");
                 return;
@@ -65,7 +66,8 @@ namespace BPNN
             nn.setInputs(2, double.Parse(button3.Text));
             nn.setInputs(3, double.Parse(button4.Text));
             nn.run();
-            textBox3.Text = "" + Math.Round(nn.getOuputData(0),4);
+            textBox3.Text = "" + Math.Round(nn.getOuputData(0), 4);
+            textBox1.Text = "" + Math.Round(nn.getOuputData(0));
         }
 
         private void createbpnn()
@@ -196,6 +198,7 @@ namespace BPNN
             createbpnn();
             trained = false;
             textBox3.Text = "";
+            textBox1.Text = "";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -204,9 +207,15 @@ namespace BPNN
             epochs();
             trained = true;
             textBox3.Text = "";
+            textBox1.Text = "";
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

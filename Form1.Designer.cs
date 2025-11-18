@@ -39,6 +39,7 @@
             button5 = new Button();
             button8 = new Button();
             label2 = new Label();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // button1
@@ -84,7 +85,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 16F);
-            textBox3.Location = new Point(188, 105);
+            textBox3.Location = new Point(188, 92);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 36);
             textBox3.TabIndex = 10;
@@ -92,7 +93,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(188, 87);
+            label1.Location = new Point(188, 74);
             label1.Name = "label1";
             label1.Size = new Size(45, 15);
             label1.TabIndex = 11;
@@ -141,18 +142,28 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(188, 144);
+            label2.Location = new Point(188, 131);
             label2.Name = "label2";
             label2.Size = new Size(73, 15);
             label2.TabIndex = 19;
             label2.Text = "Rounded off";
             label2.Click += label2_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 16F);
+            textBox1.Location = new Point(188, 149);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 36);
+            textBox1.TabIndex = 20;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(346, 379);
+            Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(button8);
             Controls.Add(button5);
@@ -184,5 +195,6 @@
         private Button button5;
         private Button button8;
         private Label label2;
+        private TextBox textBox1;
     }
 }
