@@ -65,7 +65,7 @@ namespace BPNN
             nn.setInputs(2, double.Parse(button3.Text));
             nn.setInputs(3, double.Parse(button4.Text));
             nn.run();
-            textBox3.Text = "" + Math.Round(nn.getOuputData(0));
+            textBox3.Text = "" + Math.Round(nn.getOuputData(0),4);
         }
 
         private void createbpnn()
