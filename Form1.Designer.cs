@@ -38,6 +38,7 @@
             button7 = new Button();
             button5 = new Button();
             button8 = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -137,11 +138,22 @@
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(188, 144);
+            label2.Name = "label2";
+            label2.Size = new Size(73, 15);
+            label2.TabIndex = 19;
+            label2.Text = "Rounded off";
+            label2.Click += label2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(346, 379);
+            Controls.Add(label2);
             Controls.Add(button8);
             Controls.Add(button5);
             Controls.Add(button7);
@@ -155,7 +167,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "Form1";
-            Text = "Form1";
+            Text = "BPNN";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,5 +183,6 @@
         private Button button7;
         private Button button5;
         private Button button8;
+        private Label label2;
     }
 }

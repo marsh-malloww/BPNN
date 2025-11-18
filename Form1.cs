@@ -5,6 +5,7 @@ namespace BPNN
     public partial class Form1 : Form
     {
         NeuralNet nn;
+        bool trained = false;
 
         public Form1()
         {
@@ -47,12 +48,17 @@ namespace BPNN
         private void button6_Click(object sender, EventArgs e)
         {
             epochs();
+            trained = true;
             textBox3.Text = "";
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            if(!trained)
+            {
+                MessageBox.Show("Neural Network Not Trained");
+                return;
+            }
 
             nn.setInputs(0, double.Parse(button1.Text));
             nn.setInputs(1, double.Parse(button2.Text));
@@ -188,6 +194,7 @@ namespace BPNN
         private void button5_Click(object sender, EventArgs e)
         {
             createbpnn();
+            trained = false;
             textBox3.Text = "";
         }
 
@@ -195,7 +202,13 @@ namespace BPNN
         {
             createbpnn();
             epochs();
+            trained = true;
             textBox3.Text = "";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
